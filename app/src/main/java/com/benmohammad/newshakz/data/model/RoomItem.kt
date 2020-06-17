@@ -11,14 +11,14 @@ data class RoomItem(
 
     @ColumnInfo(name = "type") val  type: String,
     @ColumnInfo(name = "by") val  authorName: String?,
-    @ColumnInfo(name = "time") val publishDate: String?,
+    @ColumnInfo(name = "time") val publishDate: Int?,
     @ColumnInfo(name = "dead") val isDead: Boolean = false,
     @ColumnInfo(name = "parent") val parent: Int?,
     @ColumnInfo(name = "text") val text: String?,
     @ColumnInfo(name = "url") val url: String?,
     @ColumnInfo(name = "title") val title: String?,
     @ColumnInfo(name = "score") val score: Int?,
-    @ColumnInfo(name = "descendants") val descendants: Boolean = false,
+    @ColumnInfo(name = "descendants") val descendants: Int = 0,
     @ColumnInfo(name = "favorite") val isFavorite: Boolean = false,
     @ColumnInfo(name = "viewed") val viewed: Boolean = false
 
