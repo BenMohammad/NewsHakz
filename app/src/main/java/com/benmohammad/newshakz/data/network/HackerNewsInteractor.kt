@@ -1,7 +1,6 @@
 package com.benmohammad.newshakz.data.network
 
 import android.content.Context
-import androidx.lifecycle.Transformations.map
 import com.benmohammad.newshakz.Mockable
 import com.benmohammad.newshakz.R
 import com.benmohammad.newshakz.data.model.Item
@@ -47,12 +46,12 @@ class HackerNewsInteractor(
         ids.forEach{allObservables.add(loadItem(it))}
         return Observable.zip(allObservables.take(min(ids.size, 50)))
         {
-            t -> convertToListofItems(t)
+            t -> convertToListOfItems(t)
         }
     }
 
     @Suppress("UNCHECKED_CAST")
-    private fun convertToListofItems(array: Array<Any>): List<Item> {
+    private fun convertToListOfItems(array: Array<Any>): List<Item> {
         return array.toList() as List<Item>
     }
 

@@ -17,5 +17,5 @@ interface ApplicationComponent {
 
     fun inject(application: MainApplication)
 
-    fun inject(activityManager: MainActivity)
+    fun inject(activity: MainActivity)
 }

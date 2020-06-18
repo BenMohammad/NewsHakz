@@ -79,6 +79,12 @@ class DataModule {
         return HackerNewsInteractor(context, api, itemStore)
     }
 
+    @Singleton
+    @Provides
+    fun provideHackerNewsApiService(retrofit: Retrofit): HackerNewsApiService {
+        return retrofit.create(HackerNewsApiService::class.java)
+
+    }
 
     @Singleton
     @Provides
