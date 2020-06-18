@@ -9,8 +9,10 @@ class NavigationEvent<T>: SingleLiveEvent<T>() {
     fun observe(owner: LifecycleOwner, observer: NavigationObserver<T>) {
         super.observe(owner, Observer {
             event -> if(event == null) {
-            observer.onNavigationEvent(event)
+
+            return@Observer
         }
+            observer.onNavigationEvent(event)
         }
         )
     }
@@ -18,6 +20,5 @@ class NavigationEvent<T>: SingleLiveEvent<T>() {
 
     interface NavigationObserver<in T> {
         fun onNavigationEvent(event: T)
-
     }
 }

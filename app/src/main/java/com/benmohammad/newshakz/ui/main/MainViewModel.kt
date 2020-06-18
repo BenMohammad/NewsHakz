@@ -61,7 +61,7 @@ class MainViewModel @Inject constructor(
         set(value) {
         field = value
         notifyPropertyChanged(BR.loading)
-        notifyPropertyChanged(BR.stories)
+        notifyPropertyChanged(BR.comments)
     }
 
     fun fetchTopStories() {
@@ -115,4 +115,5 @@ class MainViewModel @Inject constructor(
         this.item = item
         navigationEvent.value = StoryNavigation.OpenComments
 
-    }}
+    }
+}
