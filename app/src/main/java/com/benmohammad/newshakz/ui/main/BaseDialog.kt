@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.benmohammad.newshakz.R
 
-class BaseDialog: DialogFragment() {
+open class BaseDialog: DialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         this.setStyle(STYLE_NORMAL, R.style.Panel)

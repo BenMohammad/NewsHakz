@@ -3,9 +3,9 @@ package com.benmohammad.newshakz.util.databinding
 
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.benmohammad.newshakz.util.databinding.recyclerview.ArrayAdapter
+import com.benmohammad.newshakz.util.recyclerview.ArrayAdapter
 
-object RecyclerViewAdapters {
+object  RecyclerViewAdapters {
 
     @JvmStatic
     @BindingAdapter("items")

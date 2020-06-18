@@ -1,7 +1,6 @@
 package com.benmohammad.newshakz.di
 
-import android.app.ActivityManager
-import com.benmohammad.newshakz.MainActivity
+import com.benmohammad.newshakz.ui.main.MainActivity
 import com.benmohammad.newshakz.data.DataModule
 import com.benmohammad.newshakz.ui.main.ViewModelFactoryModule
 import dagger.Component

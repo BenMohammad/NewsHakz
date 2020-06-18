@@ -1,4 +1,4 @@
-package com.benmohammad.newshakz.util.databinding.recyclerview
+package com.benmohammad.newshakz.util.recyclerview
 
 import androidx.recyclerview.widget.RecyclerView
 
@@ -13,7 +13,7 @@ abstract class ArrayAdapter<Item, ItemViewHolder : RecyclerView.ViewHolder> : Re
 
     override fun getItemCount(): Int = items.size
 
-    protected fun getItemAtPosition(position: Int) {
+    protected fun getItemAtPosition(position: Int) =
         items[position]
 
-    }}
+}
