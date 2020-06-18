@@ -10,6 +10,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+
     defaultConfig {
         applicationId "com.benmohammad.newshakz"
         minSdkVersion 23
@@ -34,6 +35,9 @@ android {
     }
 
 
+    dataBinding {
+        enabled = true
+    }
 
 }
 
@@ -61,7 +65,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    kapt "androidx.databinding:databinding-compiler:$rootProject.ext.android_plugin_version"
     // Need this because of Kotlin
 
     // Android/Google libraries

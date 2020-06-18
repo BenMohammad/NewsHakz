@@ -1,0 +1,33 @@
+package com.benmohammad.newshakz.util.databinding
+
+import android.view.View
+import android.webkit.WebView
+import androidx.databinding.BindingAdapter
+
+
+object ViewAdapters {
+
+    @JvmStatic
+    @BindingAdapter("visible")
+    fun setVisible(view: View, visible: Boolean) {
+        view.visibility = if(visible) View.VISIBLE else View.INVISIBLE
+    }
+
+    @JvmStatic
+    @BindingAdapter("showString")
+    fun setVisible(view: View, string: String?) {
+        view.visibility = if(!string.isNullOrEmpty()) View.VISIBLE else View.GONE
+    }
+
+    @JvmStatic
+    @BindingAdapter("showList")
+    fun setVisible(view: View, numberOfItems: Int) {
+        view.visibility = if(numberOfItems> 0) View.VISIBLE else View.GONE
+    }
+
+    @JvmStatic
+    @BindingAdapter("webViewData")
+    fun setWebView(view: WebView, string: String?) {
+        view.loadDataWithBaseURL(null, string, "text/html", "utd-8", null)
+
+    }}
